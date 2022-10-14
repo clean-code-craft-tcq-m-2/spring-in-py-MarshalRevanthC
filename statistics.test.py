@@ -1,16 +1,23 @@
-import unittest
-import math
+import unittest, math
 import statistics
 
-class EmailAlert():
-    def __init__(self):
-        self.emailSent = False
-        
-class LEDAlert():
-    def __init__(self):
-        self.ledGlows = False
 
-class StatsAlerter():
+class EmailAlert:
+    def __init__(self, emailSent=True):
+        self.emailSent = emailSent
+
+    def alert():
+        self.emailSent = True
+
+
+class LEDAlert:
+    def __init__(self, ledGlows=True):
+        self.ledGlows = ledGlows
+
+    def alert():
+        self.ledGlows = True
+
+class StatsAlerter:
     def __init__(self, v1, v2):
         self.maxThreshold = v1
         self.list = v2
